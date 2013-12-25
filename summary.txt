@@ -1,0 +1,53 @@
+http://zf2.readthedocs.org/en/latest/ref/installation.html
+
+
+Downloading the Composer Executable#
+
+Locally#
+
+To actually get Composer, we need to do two things. The first one is installing Composer (again, this means downloading it into your project):
+
+$ curl -sS https://getcomposer.org/installer | php
+
+
+
+Globally#
+
+You can place this file anywhere you wish. If you put it in your PATH, you can access it globally. On unixy systems you can even make it executable and invoke it without php.
+
+You can run these commands to easily access composer from anywhere on your system:
+
+$ mv composer.phar /usr/local/bin/composer
+
+
+
+Now to create skeleton application 
+
+download file from https://github.com/zendframework/ZendSkeletonApplication
+
+
+       or 
+       
+       
+install from composer
+$ composer create-project --repository-url="https://packages.zendframework.com" -s dev zendframework/skeleton-application /data/www/zend2
+
+
+where /data/ww/zend2 is project path
+
+Now browse 
+
+localhost/zend2
+
+
+if you get following error 
+
+"Fatal error: Uncaught exception 'RuntimeException' with message
+'Unable to load ZF2. Run `php composer.phar install` or define
+a ZF2_PATH environment variable.'"
+
+zendframework 2's libary to "zend2/vendor/ZF2/" i.e ur project folder's vendor/ZF2
+
+
+
+
