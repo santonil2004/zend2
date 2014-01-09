@@ -1,4 +1,23 @@
 <?php
+
+function r($data) {
+    echo '<pre>';
+    print_r($data);
+    echo '</pre>';
+}
+
+$serverName = $_SERVER['SERVER_NAME'];
+
+if (strstr($serverName, 'dev')) {
+    define('APPLICATION_ENV', 'development');
+} else if (strstr($serverName, 'stage')) {
+    define('APPLICATION_ENV', 'staging');
+} else {
+    define('APPLICATION_ENV', 'production');
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
+}
+
 /**
  * This makes our life easier when dealing with paths. Everything is relative
  * to the application root now.
