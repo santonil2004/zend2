@@ -6,7 +6,7 @@ return array(
             'Album\Controller\Album' => 'Album\Controller\AlbumController',
         ),
     ),
-    'routers' => array(// routes for module starts here
+    'router' => array(// routes for module starts here
         'routes' => array(
             'album' => array(
                 'type' => 'segment',
