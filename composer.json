@@ -3,12 +3,17 @@
     "description": "Skeleton Application for ZF2",
     "license": "BSD-3-Clause",
     "keywords": [
-        "framework",
-        "zf2"
+    "framework",
+    "zf2"
     ],
     "homepage": "http://framework.zend.com/",
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Album": "module/Album/src/"
+        }
     }
 }
